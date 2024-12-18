@@ -79,7 +79,6 @@ def to_sec(nanosecs):
 
 
 def inference_stats(model_response: OllamaResponse):
-    # Use properties for calculations
     prompt_ts = model_response.prompt_eval_count / (
         to_sec(model_response.prompt_eval_duration)
     )
@@ -212,4 +211,4 @@ def main():
 if __name__ == "__main__":
     main()
     # Example usage:
-    # python benchmark.py --verbose --prompts "What color is the sky" "Write a report on the financials of Microsoft"
+    # python benchmark.py --verbose --prompts "What color is the sky" "Write a story about a robot that paints houses."
