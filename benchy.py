@@ -165,7 +165,7 @@ def main():
 
     verbose = args.verbose
     prompts = args.prompts
-    print(f"\nVerbose: {verbose}\nPrompts: {prompts}")
+    print(f"\nPrompts: {prompts}")
 
     model_names = get_benchmark_models()
     if not model_names:
@@ -193,7 +193,7 @@ def main():
     responses: List[OllamaResponse] = []
     for prompt in prompts:
         if verbose:
-            print(f"\n\nBenchmarking: {selected_model}\nPrompt: {prompt}")
+            print(f"\nPrompt: {prompt}")
         response = run_benchmark(selected_model, prompt, verbose=verbose)
         if response:
             responses.append(response)
